@@ -6,7 +6,7 @@ import { CertificatesState, Certificate } from '../types';
 export const loadCertificatesList = createAsyncThunk<any, undefined, { state: RootState }>(
   'certificates/loadCertificatesList',
   async (_, { rejectWithValue }) => {
-    const key = process.env.REACT_APP_API_KEY;
+    const key = '011ba11bdcad4fa396660c2ec447ef14';
     const url = `https://sycret.ru/service/api/api`;
     try {
       const response = await fetch(`${url}?MethodName=OSGetGoodList&ismob=0&ApiKey=${key}`);
@@ -20,7 +20,7 @@ export const loadCertificatesList = createAsyncThunk<any, undefined, { state: Ro
 export const postCertificate = createAsyncThunk<any, any, { state: RootState }>(
   'certificates/postCertificate',
   async (postData, { rejectWithValue }) => {
-    const key = process.env.REACT_APP_API_KEY;
+    const key = '011ba11bdcad4fa396660c2ec447ef14';
     const url = `https://sycret.ru/service/api/api`;
     try {
       const response = await fetch(`${url}`, {

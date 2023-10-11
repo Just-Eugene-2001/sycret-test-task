@@ -9,7 +9,7 @@ export const loadCertificatesList = createAsyncThunk<any, undefined, { state: Ro
     const key = process.env.REACT_APP_API_KEY;
     const url = `https://sycret.ru/service/api/api`;
     try {
-      const response = await fetch(`${url}?ApiKey=${key}&MethodName=OSGetGoodList&ismob=0`);
+      const response = await fetch(`${url}?MethodName=OSGetGoodList&ismob=0&ApiKey=${key}`);
       const data = await response.json();
       return data.data;
     } catch (err) {

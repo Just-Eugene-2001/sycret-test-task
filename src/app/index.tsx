@@ -21,6 +21,7 @@ function App() {
         <Route path={'/'} element={<Main/>}/>
         <Route path={'/form'} element={<Form/>}/>
         <Route path={'/success'} element={<Success/>}/>
+        <Route path={'*'} element={<Main/>}/>
       </Routes>
     </BrowserRouter>
   );
